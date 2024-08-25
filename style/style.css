@@ -1,0 +1,156 @@
+@import url('https://fonts.google.com/share?selection.family=Moderustic:wght@300..800|Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900');
+
+:root {
+    --color-primario: #77E4C8;
+    --color-secundario: #000000;
+    --color-terciario: #36C2CE;
+    --color-base: #fcfbfb;
+
+    --fuente-moderustic: "Moderustic", sans-serif;
+    --fuente-roboto: "Roboto", sans-serif;
+}
+
+* {
+    background: var(--color-primario);
+    font-family: var(--fuente-moderustic);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logo {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
+    color: var(--color-secundario);
+    font-family: var(--fuente-roboto);
+    font-weight: 600;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: var(--color-terciario);
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.mensaje {
+    background: var(--color-primario);
+    background-image: url("/assets/Muñeco.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    border-radius: 24px;
+    color: var(--color-secundario);
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 18px;
+    margin-left: 30px;
+}
+
+.btn-encriptar, .btn-desencriptar, .copiar {
+    background-color: var(--color-terciario);
+    border: 1px solid #201E43;
+    border-radius: 24px;
+    color: var(--color-base);
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+}
+
+.información {
+    color: var(--color-base);
+    font-family: var(--fuente-roboto);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.footer {
+    background-color: var(--color-primario);
+    color: var(--color-base);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: var(--fuente-moderustic);
+}
+
+/* Media Queries para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .mensaje {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    .botones {
+        margin-left: 0;
+        margin-right: 0;
+        gap: 15px;
+    }
+
+    .btn-encriptar, .btn-desencriptar, .copiar {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .text-area {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .logo {
+        width: 20%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    * {
+        font-size: 28px; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+    }
+
+    .footer {
+        padding: 8px;
+    }
+}
